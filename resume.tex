@@ -1,0 +1,135 @@
+% !TEX program = xelatex
+% This is my resume
+% by ice1000
+
+\documentclass{resume}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{linespacing_fix} % disable extra space before next section
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\name{Xu LingXiao}
+
+\basicInfo{
+  \email{readlnh@hotmail.com} \textperiodcentered\
+  \phone{(+86) 184-3436-1246} \textperiodcentered\
+  \github[readlnh]{https://github.com/readlnh}
+  % \linkedin[user]{https://www.linkedin.com/in/user}
+}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{North University of China (NUC)},  CN}{09/14 -- 06/18}
+  Major: 
+    Electronic and Information Engineering
+
+\section{\faUsers\ Work Experience}
+\datedsubsection{\textbf{Institute of Acoustics of the Chinese Academy of Sciences}}{03/18 -- 06/18}
+\role{Intern}{Ultrasonic Photoelastic Visualization Development}
+\begin{itemize}
+  \item Designed the basic set-up for the photo-elastic system including the delay circuit for timing and delay of illumination with respect to the pulse.
+  \item Developed the software of the whole system, including camera control,  image capture, image scaling, image processing.
+  \item Learned a lot about C++ programming and Qt5.
+\end{itemize}
+
+\datedsubsection{\textbf{National University Of Defense Technology}, Full-time}{07/18 -- 06/19}
+\role{Operating System Engineer}{Mobile OS Team}
+\begin{itemize}
+  \item Improved many libraries used by Kylin OS. For example,
+    optimized the display performance of graphics inside,
+    and added new features to the sensor framework.
+  \item Ported the OS to different devices, such as ST700, Nexus 4, Nexus 7.
+\end{itemize}
+
+\role{Operating System Engineer, Desktop Environment Developer}{Ubuntu Kylin Team}
+\begin{itemize}
+  \item Maintained the open source projects of UbuntuKylin. Created the Devops System of the projects including automatic tools and testing frameworks.
+  \item Developed and Maintained ukui desktop environment. Added HiDPI support to the desktop enviroment, upgraded the system tray, followed the rules of the freedesktop.
+  \item Customized a special UbuntuKylin version which could running in the docker with full desktop environment, replaced some Dbus services and customized the graphics under the desktop environment.
+  \item Created UbuntuKylin Wiki, based on nodejs.
+\end{itemize}
+
+\section{\faGithubAlt \ Personal Projects}
+
+
+\datedsubsection{\textbf{rtoyos}}{\url{https://github.com/readlnh/rtoyos}}
+Simple,mini Operating System kernel written by C Programming Language
+\begin{itemize}
+  \item Using the Multiboot standard, bootloading with Grub2.
+  \item Supporting simple memory management.
+  \item Supporting multitasks.
+\end{itemize}
+
+\datedsubsection{\textbf{rdocker}}{\url{https://github.com/readlnh/rdocker}}
+My own docker written by Go(Developing...)
+\begin{itemize}
+  \item Isolating applications in a virtual private root but taking the process further.
+  \item Supporting six Namespaces, including UTS(hostname), IPC(inter-process communication), NS(mount points), NET(network access), USER(map virtual, local user-ids to real local ones).
+  \item Using Cgroups to conrol the resources. 
+\end{itemize}
+
+\section{\faHeartO\ Honors \& Awards}
+\datedline{The ACM-ICPC Asia Regional Contest Hefei Site 2015  \textit{Bronze Medal}}{10/15}
+\datedline{The 7th Contest of LAN QIAO CUP Software B group Shanxi \textit{First prize}}{03/16}
+\datedline{The 7th Contest of LAN QIAO CUP Software B group Final \textit{First prize(top50)}}{05/16}
+\datedline{The Second Group Programming Ladder Tournament Northwestern Regional Contest \textit{First Price}}{03/17}
+\datedline{The Second Group Programming Ladder Tournament Northwestern Final Contest \textit{Second Price}}{07/17}
+
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.25ex]
+  \item \textbf{Programming Languages}:
+    \textbf{multilingual developer} (not limited to any specific language),
+    and especially experienced in C/Rust/Python/Go,
+    comfortable with C++/C\#/lisp/ruby (listed in random order).
+
+  % Operating System theories
+  \item \textbf{Operating System}:
+    familiar with the graphics architecture of Android/Linux, including both low-level and high-level components
+    understand MemoryBlock, IPC and Threading Models, studied some theories about filesystem.
+
+  % language C/C++
+  \item \textbf{C/C++}:
+    \textbf{4 years} of experience,
+    familiar with gtk+/Qt programming, Linux Programming, the CMake build tool, have experience
+    in OpenCV/OpenGL.
+
+  \item \textbf{Algorithm Theories}:
+    familiar with Dymaic Programming, Greedy Algorithms, Data Structures, Graph Algorithms,
+    understand Computational Geometry and Number theory.
+
+  \item \textbf{Developing Tools}:
+    can adapt to any editors/OSs, usually use vim/VsCode and JetBrains IDEs under Ubuntu.
+    Experience working with Git and Git workflow.
+
+  \item \textbf{Devops}:
+    Experience working with docker and k8s.      
+
+ \item \textbf{Languages}:
+    \item Languages: English - fluent, Chinese - native speaker
+\end{itemize}
+
+
+
+\section{\faInfo\ Miscellaneous}
+\begin{itemize}[parsep=0.25ex]
+  \item Blog: \url{https://readlnh.github.io/} haven't translated into English
+  \item Member of Chinese Rust Programming Community
+  \item Ubuntu developer
+  \item Books about operating system I've translated: \url{https://github.com/readlnh/Writing-an-OS-in-Rust-Second-Edition-zh_CN}
+  \item Opensource contributions: 
+    pull-requested (functional improvements) to organizations like \textit{Rust, Ubuntu, Redox}
+  \item Love making friends
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
+

@@ -1,0 +1,130 @@
+% !TEX program = xelatex
+% This is my resume
+% Chinese translation
+% by ice1000
+
+\documentclass{resume}
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage[fallback]{xeCJK}
+
+%% \setmainfont[]{SimSun}
+%% \setCJKfallbackfamilyfont{rm}{HAN NOM B}
+%%\setCJKmainfont[BoldFont=Sarasa Gothic SC,ItalicFont=KaiTi_GB2312]{Source Han Serif SC}
+%% \renewcommand{\thepage}{\Chinese{page}}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\name{徐凌霄}
+
+\basicInfo{
+  \email{readlnh@163.com} \textperiodcentered\ 
+  \phone{(+86) 184-3436-1246} \textperiodcentered\ 
+  \github[readlnh]{https://github.com/readlnh}
+  % \linkedin[user]{https://www.linkedin.com/in/user}
+}
+
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{中北大学}, 中国}{2014.9 -- 2018.7}
+  专业：电子信息工程
+
+\section{\faUsers\ 工作/实习经历}
+\datedsubsection{\textbf{中国科学院声学所}, 北京, 中国}{2018.2 -- 2018.6}
+\role{实习}{超声光弹系统的上位机开发}
+\begin{itemize}
+  \item 负责超声光弹系统的上位机开发，采用qt5相关技术
+  \item 修复底层电路问题，并通过单片机编程实现激光和超声信号的同步控制
+  \item 通过上位机实现对旋转镜架和相机的同步控制，以达到同步拍摄照片的效果
+\end{itemize}
+
+\datedsubsection{\textbf{国防科技大学银河技术服务部}, 长沙, 中国}{2018.8 -- 至今}
+\role{全职}{操作系统研发工程师}
+\begin{itemize}
+  \item 针对终端os(基于firefoxos)进行开发和优化，主要负责图形和传感器两大块
+    \begin{itemize}
+      \item 适配了ST700,nexus4,nexus7(flo),nexus7(deb)等多台设备(其余涉密不列)
+      \item 将终端os底层HAL从安卓4.4升级到安卓6.0,适配安卓6.0设备
+      \item 调研b2g传感器框架，给出了终端os传感器移植方案，并用于多个军方项目，得到良好效果
+      \item 针对某些特殊设备进行图形优化，解决裂屏现象  
+    \end{itemize} 
+  
+  \item 进行ukui开源社区的维护，实现自动编包平台
+  \begin{itemize}
+    \item 实现了自动编辑changelog，修改维护者签名，以及版本号自增功能
+    \item 实现了自动安装依赖，检查，并编包上传launchpad平台功能
+    \item 实现了定时自启动任务同步github代码以达到每日更新软件源的效果
+  \end{itemize}
+
+  \item 进行ukui桌面环境的开发和维护，主要负责ukui-panel，ukui-indicator
+    \begin{itemize}
+      \item 修复panel的高分屏显示
+      \item 优化了ukui-indicator的图标显示，解决了panel切换方向后图标位移的问题
+    \end{itemize}
+\end{itemize} 
+
+\section{\faGithubAlt\ 个人项目}
+
+\datedsubsection{\textbf{rtoyos}}{\url{https://github.com/readlnh/rtoyos}}
+mini操作系统内核
+\begin{itemize}
+  \item 使用multiboot规范，采用grub2引导启动
+  \item 实现了全局描述符表，中断描述符表，可自定义中断
+  \item 实现了基本的内存管理
+\end{itemize}
+
+\datedsubsection{\textbf{rdocker}}{\url{https://github.com/readlnh/rdocker.git}}
+mydocker在linux 4.18.0-17-generic版本内核上的实现(完善中)
+\begin{itemize}
+  \item 已实现linux namespace的隔离
+  \item 已实现cgroups资源限制
+\end{itemize}
+
+\section{\faHeartO\ HONORS & AWARDS}
+\datedline{ACM-ICPC 亚洲区合肥站 铜牌}{2015.10}
+\datedline{第七届蓝桥杯大赛山西赛区 B 组 一等奖}{2016.03}
+\datedline{第七届蓝桥杯大赛全国总决赛 B 组 一等奖}{2016.05}
+\datedline{第二届中国高校计算机大赛西北赛区 团队一等奖}{2017.03}
+\datedline{第二届中国高校计算机大赛总决赛 高校二等奖}{2017.07}
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.25ex]
+  \item \textbf{编程语言}:
+    工作主要使用c/c++开发，熟悉gtk+,glib，对golang/python/rust比较了解
+
+  % compiler theories
+  \item \textbf{操作系统}:
+    \begin{itemize}
+      \item  对操作系统的基本原理较为熟悉，熟练使用linux环境开发
+      \item  熟悉安卓底层结构，了解安卓显示机制
+    \end{itemize}
+
+  \item \textbf{IDE 开发工具}:
+    熟悉vim，shell，熟练使用linux平台下的各种工具
+    熟悉git，以及git协作开发，有使用github，launchpad等平台的相关经验
+    熟悉ubuntu平台编包规则和流程
+
+\end{itemize}
+
+% \section{\faHeartO\ Honors and Awards}
+% \datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
+% \datedline{Other awards}{2015}
+
+\section{\faInfo\ 其他}
+\begin{itemize}[parsep=0.25ex]
+  \item 博客: \url{https://blog.csdn.net/readlnh}
+  \item githubpages 博客: \url{https://readlnh.github.io/}
+  \item 知乎专栏: \url{https://zhuanlan.zhihu.com/c_1066709704398532608}
+  \item 有技术热情，善于学习新知识
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
